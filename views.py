@@ -27,7 +27,7 @@ def play(request, frome, to):
                         </page>"""
             elif int(frome)==2:
                 VALUEE = request.GET["my_input"]
-                FINALVALUE = float(VALUEE)*(float(rates[currencies[3]])/float(rates[currencies[2]]))
+                FINALVALUE = float(VALUEE)*(float(rates[currencies[3]])/float(rates[currencies[int(to)]]))
                 resp = \
                     """<?xml version="1.0" encoding="UTF-8"?>
                         <page version="2.0" style="category">
