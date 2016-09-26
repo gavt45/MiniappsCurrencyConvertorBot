@@ -1,30 +1,16 @@
 # -*- coding: utf-8 -*-
 # Create your views here.
 from django.http import HttpResponse
+import requests
 
-CURRENCIESAPIID='d5daacd93abb414eb1df502507a382f6'
-
-currencies=[
+CURRENCIESAPIID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' #openexchangerates.org api id
+currencies=[ # Code uses only 1 2 and 3 
     "BRL",
     "USD",
     "EUR",
     "RUB",
 ]
-
-"""
-def push_test(request):
-     Проверка пушей
-    for i in range(0, 1):
-        req = urllib.request.Request("http://ec2.globalussd.mobi/push?protocol=telegram&service=eyeline.peter&subscriber=014084507047&push=" + str(i))
-        resp = urllib.request.urlopen(req)
-        time.sleep(10)
-
-    return HttpResponse(resp.read())
-"""
-import requests
 def play(request, frome, to):
-        """ Начало игры """
-
         response = requests.get('https://openexchangerates.org/api/latest.json?app_id=' + CURRENCIESAPIID+'&base=USD')
         respJson = response.json()
         rates = respJson['rates']
@@ -78,11 +64,3 @@ def play(request, frome, to):
                     </page>"""
             print 'resp in except: '+resp
             return HttpResponse(resp)
-        respother =\
-        """<?xml version="1.0" encoding="UTF-8"?>
-                <page version="2.0" style="category">
-              <div protocol="telegram">
-                Получается что<br/>
-                """+str(int(num))+""" доллар в """+str(currencies[int(num)])+""" будет """+str(FINALVALUE)+"""
-              </div>
-        </page>"""
