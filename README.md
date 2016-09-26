@@ -1,5 +1,5 @@
 # MiniappsCurrencyConvertorBot
-Python http://miniapps.run bot to convert currences.
+Python 2.7 http://miniapps.run bot to convert currences.
 
 # Requirements:
 Python libraries:
@@ -13,6 +13,9 @@ Other:
 
 # How to setup:
 On linux:
+
+- Install libs: sudo apt-get install python-django
+- And with pip: sudo python2.7 -m pip install django requests
 
 1. Create django project: django-admin startproject MiniappsFinanceBot
 2. Copy with replacement files from downloaded repo to MiniappsFinanceBot/MiniappsFinanceBot
