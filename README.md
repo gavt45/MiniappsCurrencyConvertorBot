@@ -10,6 +10,7 @@ Python libraries:
 Other:
 
 - ngrok (download from https://ngrok.com/download)
+- and you need an account on https://openexchangerates.org/ to set 'CURRENCIESAPIID' in view.py equals to your API id
 
 # How to setup:
 On linux:
