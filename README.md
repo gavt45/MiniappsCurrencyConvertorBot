@@ -22,3 +22,8 @@ On linux:
 2. Copy with replacement files from downloaded repo to MiniappsFinanceBot/MiniappsFinanceBot
 3. Run ngrok: sudo ./ngrok http 8080
 3. Now run server: sudo python MiniappsFinanceBot/manage.py runserver 8080
+
+# Request spec:
+
+- Request should look like {bot web addres}/{from}/{to}
+- from and to should be 1-USD;2-EUR;3-RUB
