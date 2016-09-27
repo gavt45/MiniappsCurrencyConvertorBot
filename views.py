@@ -27,7 +27,7 @@ def play(request, frome, to):
                         </page>"""
             elif int(frome)==2:
                 VALUEE = request.GET["my_input"]
-                FINALVALUE = float(VALUEE)*(float(rates[currencies[3]])/float(rates[currencies[int(to)]]))
+                FINALVALUE = float(VALUEE)*(float(rates[currencies[int(frome)]])/float(rates[currencies[int(to)]]))
                 resp = \
                     """<?xml version="1.0" encoding="UTF-8"?>
                         <page version="2.0" style="category">
@@ -37,7 +37,7 @@ def play(request, frome, to):
                         </page>"""
             elif int(frome)==3:
                 VALUEE = request.GET["my_input"]
-                FINALVALUE = float(VALUEE)/float(rates[currencies[1]]) * float(rates[currencies[int(to)]])
+                FINALVALUE = float(VALUEE)*(float(rates[currencies[int(frome)]]) / float(rates[currencies[int(to)]]))
                 resp = \
                     """<?xml version="1.0" encoding="UTF-8"?>
                         <page version="2.0" style="category">
